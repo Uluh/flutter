@@ -1,0 +1,92 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(new MyApp());
+}
+
+class TextData {
+  String name = '';
+  String phoneNumber = '';
+  String timer = '';
+  String message = '';
+}
+
+class MyApp extends StatefulWidget {
+  MyApp({Key key}) : super(key: key);
+
+  @override
+  _MyAppState createState() => new _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  TextData text = new TextData();
+
+ // void _handleSubmitted() {}
+
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      title: 'Delayed Texts',
+      home: new Scaffold(
+        appBar: new AppBar(
+          title: new Text('Delayed Texts'),
+        ),
+        body: new SafeArea(
+          top: false,
+          bottom: false,
+          child: new Form(
+            child: new SingleChildScrollView(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: new Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    // Name
+                    const SizedBox(height: 24.0),
+                    new TextFormField(
+                      decoration: const InputDecoration(
+                        border: const UnderlineInputBorder(),
+                        filled: true,
+                        icon: const Icon(Icons.person),
+                        hintText: 'Who to Call?',
+                        labelText: 'Name',
+                      ),
+                    ),
+                    // Phone Number
+                    const SizedBox(height: 24.0),
+                    new TextFormField(
+                      decoration: const InputDecoration(
+                        border: const UnderlineInputBorder(),
+                        filled: true,
+                        icon: const Icon(Icons.phone),
+                        hintText: 'Number to Call?',
+                        labelText: 'Phone Number',
+                      ),
+                      keyboardType: TextInputType.phone,
+                    ),
+                    // Text Message
+                    const SizedBox(height: 24.0),
+                    new TextFormField(
+                      decoration: const InputDecoration(
+                        border: const UnderlineInputBorder(),
+                        filled: true,
+                        icon: const Icon(Icons.message),
+                        hintText: 'What Would you like to send?',
+                        labelText: 'Text Message',
+                      ),
+                    ),
+                    // Submit
+                    const SizedBox(height: 24.0),
+                    new Center(
+                      child: new RaisedButton(
+                        child: const Text('SUBMIT'),
+                  //      onPressed: _handleSubmitted,
+                      ),
+                    ),
+                  ]),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
