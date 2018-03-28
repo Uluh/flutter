@@ -1,0 +1,105 @@
+Launching lib\main.dart on ONE A2005 in debug mode...
+Built build\app\outputs\apk\debug\app-debug.apk (25.4MB).
+I/FlutterActivityDelegate(31419): onResume setting current activity to this
+I/flutter (31419): ══╡ EXCEPTION CAUGHT BY WIDGETS LIBRARY ╞═══════════════════════════════════════════════════════════
+I/flutter (31419): The following assertion was thrown building Scrollable(axisDirection: right, physics:
+I/flutter (31419): ClampingScrollPhysics, dirty, state: ScrollableState#eac34(position:
+I/flutter (31419): ScrollPositionWithSingleContext#5abc2(offset: 0.0, range: null..null, viewport: null,
+I/flutter (31419): ScrollableState, ClampingScrollPhysics -> ClampingScrollPhysics, IdleScrollActivity#47236,
+I/flutter (31419): ScrollDirection.idle))):
+I/flutter (31419): EditableTextState created without a textDirection and with no ambient Directionality.
+I/flutter (31419): 'package:flutter/src/widgets/editable_text.dart': Failed assertion: line 630: 'result != null'
+I/flutter (31419): Either the assertion indicates an error in the framework itself, or we should provide substantially
+I/flutter (31419): more information in this error message to help you determine and fix the underlying cause.
+I/flutter (31419): In either case, please report this assertion by filing a bug on GitHub:
+I/flutter (31419):   https://github.com/flutter/flutter/issues/new
+I/flutter (31419): When the exception was thrown, this was the stack:
+I/flutter (31419): #2      EditableTextState._textDirection (package:flutter/src/widgets/editable_text.dart:630)
+I/flutter (31419): #3      EditableTextState.build.<anonymous closure> (package:flutter/src/widgets/editable_text.dart:687)
+I/flutter (31419): #4      ScrollableState.build (package:flutter/src/widgets/scrollable.dart:501)
+I/flutter (31419): #5      StatefulElement.build (package:flutter/src/widgets/framework.dart:3713)
+I/flutter (31419): #6      ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3625)
+I/flutter (31419): #7      Element.rebuild (package:flutter/src/widgets/framework.dart:3478)
+I/flutter (31419): #8      ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:3605)
+I/flutter (31419): #9      StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:3741)
+I/flutter (31419): #10     ComponentElement.mount (package:flutter/src/widgets/framework.dart:3600)
+I/flutter (31419): #11     Element.inflateWidget (package:flutter/src/widgets/framework.dart:2890)
+I/flutter (31419): #12     Element.updateChild (package:flutter/src/widgets/framework.dart:2693)
+I/flutter (31419): #13     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3636)
+I/flutter (31419): #14     Element.rebuild (package:flutter/src/widgets/framework.dart:3478)
+I/flutter (31419): #15     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:3605)
+I/flutter (31419): #16     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:3741)
+I/flutter (31419): #17     ComponentElement.mount (package:flutter/src/widgets/framework.dart:3600)
+I/flutter (31419): #18     Element.inflateWidget (package:flutter/src/widgets/framework.dart:2890)
+I/flutter (31419): #19     Element.updateChild (package:flutter/src/widgets/framework.dart:2693)
+I/flutter (31419): #20     SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:4611)
+I/flutter (31419): #21     Element.inflateWidget (package:flutter/src/widgets/framework.dart:2890)
+I/flutter (31419): #22     Element.updateChild (package:flutter/src/widgets/framework.dart:2693)
+I/flutter (31419): #23     _RenderDecorationElement._mountChild (package:flutter/src/material/input_decorator.dart:1082)
+I/flutter (31419): #24     _RenderDecorationElement.mount (package:flutter/src/material/input_decorator.dart:1097)
+I/flutter (31419): #25     Element.inflateWidget (package:flutter/src/widgets/framework.dart:2890)
+I/flutter (31419): #26     Element.updateChild (package:flutter/src/widgets/framework.dart:2693)
+I/flutter (31419): #27     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3636)
+I/flutter (31419): #28     Element.rebuild (package:flutter/src/widgets/framework.dart:3478)
+I/flutter (31419): #29     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:3605)
+I/flutter (31419): #30     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:3741)
+I/flutter (31419): #31     ComponentElement.mount (package:flutter/src/widgets/framework.dart:3600)
+I/flutter (31419): #32     Element.inflateWidget (package:flutter/src/widgets/framework.dart:2890)
+I/flutter (31419): #33     Element.updateChild (package:flutter/src/widgets/framework.dart:2693)
+I/flutter (31419): #34     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3636)
+I/flutter (31419): #35     Element.rebuild (package:flutter/src/widgets/framework.dart:3478)
+I/flutter (31419): #36     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:3605)
+I/flutter (31419): #37     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:3741)
+I/flutter (31419): #38     ComponentElement.mount (package:flutter/src/widgets/framework.dart:3600)
+I/flutter (31419): #39     Element.inflateWidget (package:flutter/src/widgets/framework.dart:2890)
+I/flutter (31419): #40     Element.updateChild (package:flutter/src/widgets/framework.dart:2693)
+I/flutter (31419): #41     SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:4611)
+I/flutter (31419): #42     Element.inflateWidget (package:flutter/src/widgets/framework.dart:2890)
+I/flutter (31419): #43     Element.updateChild (package:flutter/src/widgets/framework.dart:2693)
+I/flutter (31419): #44     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3636)
+I/flutter (31419): #45     Element.rebuild (package:flutter/src/widgets/framework.dart:3478)
+I/flutter (31419): #46     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:3605)
+I/flutter (31419): #47     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:3741)
+I/flutter (31419): #48     ComponentElement.mount (package:flutter/src/widgets/framework.dart:3600)
+I/flutter (31419): #49     Element.inflateWidget (package:flutter/src/widgets/framework.dart:2890)
+I/flutter (31419): #50     Element.updateChild (package:flutter/src/widgets/framework.dart:2693)
+I/flutter (31419): #51     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3636)
+I/flutter (31419): #52     Element.rebuild (package:flutter/src/widgets/framework.dart:3478)
+I/flutter (31419): #53     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:3605)
+I/flutter (31419): #54     ComponentElement.mount (package:flutter/src/widgets/framework.dart:3600)
+I/flutter (31419): #55     Element.inflateWidget (package:flutter/src/widgets/framework.dart:2890)
+I/flutter (31419): #56     Element.updateChild (package:flutter/src/widgets/framework.dart:2693)
+I/flutter (31419): #57     SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:4611)
+I/flutter (31419): #58     Element.inflateWidget (package:flutter/src/widgets/framework.dart:2890)
+I/flutter (31419): #59     Element.updateChild (package:flutter/src/widgets/framework.dart:2693)
+I/flutter (31419): #60     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3636)
+I/flutter (31419): #61     Element.rebuild (package:flutter/src/widgets/framework.dart:3478)
+I/flutter (31419): #62     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:3605)
+I/flutter (31419): #63     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:3741)
+I/flutter (31419): #64     ComponentElement.mount (package:flutter/src/widgets/framework.dart:3600)
+I/flutter (31419): #65     Element.inflateWidget (package:flutter/src/widgets/framework.dart:2890)
+I/flutter (31419): #66     MultiChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:4716)
+I/flutter (31419): #67     Element.inflateWidget (package:flutter/src/widgets/framework.dart:2890)
+I/flutter (31419): #68     Element.updateChild (package:flutter/src/widgets/framework.dart:2693)
+I/flutter (31419): #69     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3636)
+I/flutter (31419): #70     Element.rebuild (package:flutter/src/widgets/framework.dart:3478)
+I/flutter (31419): #71     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:3605)
+I/flutter (31419): #72     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:3741)
+I/flutter (31419): #73     ComponentElement.mount (package:flutter/src/widgets/framework.dart:3600)
+I/flutter (31419): #74     Element.inflateWidget (package:flutter/src/widgets/framework.dart:2890)
+I/flutter (31419): #75     Element.updateChild (package:flutter/src/widgets/framework.dart:2693)
+I/flutter (31419): #76     RenderObjectToWidgetElement._rebuild (package:flutter/src/widgets/binding.dart:852)
+I/flutter (31419): #77     RenderObjectToWidgetElement.mount (package:flutter/src/widgets/binding.dart:823)
+I/flutter (31419): #78     RenderObjectToWidgetAdapter.attachToRenderTree.<anonymous closure> (package:flutter/src/widgets/binding.dart:769)
+I/flutter (31419): #79     BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:2205)
+I/flutter (31419): #80     RenderObjectToWidgetAdapter.attachToRenderTree (package:flutter/src/widgets/binding.dart:768)
+I/flutter (31419): #81     BindingBase&GestureBinding&ServicesBinding&SchedulerBinding&PaintingBinding&RendererBinding&WidgetsBinding.attachRootWidget (package:flutter/src/widgets/binding.dart:657)
+I/flutter (31419): #82     runApp (package:flutter/src/widgets/binding.dart:699)
+I/flutter (31419): #83     main (file:///D:/New%20folder/New%20folder/dealyed_text/lib/main.dart:5)
+I/flutter (31419): #84     _startIsolate.<anonymous closure> (dart:isolate-patch/dart:isolate/isolate_patch.dart:279)
+I/flutter (31419): #85     _RawReceivePortImpl._handleMessage (dart:isolate-patch/dart:isolate/isolate_patch.dart:165)
+I/flutter (31419): (elided 2 frames from class _AssertionError)
+I/flutter (31419): ════════════════════════════════════════════════════════════════════════════════════════════════════
+I/flutter (31419): Another exception was thrown: No Directionality widget found.
+I/flutter (31419): Another exception was thrown: No Directionality widget found.
+I/flutter (31419): Another exception was thrown: A RenderFlex overflowed by 199432 pixels on the bottom.
