@@ -1,0 +1,82 @@
+I/flutter (31419): ══╡ EXCEPTION CAUGHT BY WIDGETS LIBRARY ╞═══════════════════════════════════════════════════════════
+I/flutter (31419): The following assertion was thrown building Scrollable(axisDirection: right, physics:
+I/flutter (31419): ClampingScrollPhysics, dirty, state: ScrollableState#eac34(position:
+I/flutter (31419): ScrollPositionWithSingleContext#5abc2(offset: 0.0, range: null..null, viewport: null,
+I/flutter (31419): ScrollableState, ClampingScrollPhysics -> ClampingScrollPhysics, IdleScrollActivity#47236,
+I/flutter (31419): ScrollDirection.idle))):
+I/flutter (31419): EditableTextState created without a textDirection and with no ambient Directionality.
+I/flutter (31419): 'package:flutter/src/widgets/editable_text.dart': Failed assertion: line 630 pos 12: 'result !=
+I/flutter (31419): null'
+I/flutter (31419): Either the assertion indicates an error in the framework itself, or we should provide substantially
+I/flutter (31419): more information in this error message to help you determine and fix the underlying cause.
+I/flutter (31419): In either case, please report this assertion by filing a bug on GitHub:
+I/flutter (31419):   https://github.com/flutter/flutter/issues/new
+I/flutter (31419): When the exception was thrown, this was the stack:
+I/flutter (31419): #2      EditableTextState._textDirection (package:flutter/src/widgets/editable_text.dart:630:12)
+I/flutter (31419): #3      EditableTextState.build.<anonymous closure> (package:flutter/src/widgets/editable_text.dart:687:30)
+I/flutter (31419): #4      ScrollableState.build (package:flutter/src/widgets/scrollable.dart:501:27)
+I/flutter (31419): #5      StatefulElement.build (package:flutter/src/widgets/framework.dart:3713:27)
+I/flutter (31419): #6      ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3625:15)
+I/flutter (31419): #7      Element.rebuild (package:flutter/src/widgets/framework.dart:3478:5)
+I/flutter (31419): #8      StatefulElement.update (package:flutter/src/widgets/framework.dart:3760:5)
+I/flutter (31419): #9      Element.updateChild (package:flutter/src/widgets/framework.dart:2682:15)
+I/flutter (31419): #10     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3636:16)
+I/flutter (31419): #11     Element.rebuild (package:flutter/src/widgets/framework.dart:3478:5)
+I/flutter (31419): #12     StatefulElement.update (package:flutter/src/widgets/framework.dart:3760:5)
+I/flutter (31419): #13     Element.updateChild (package:flutter/src/widgets/framework.dart:2682:15)
+I/flutter (31419): #14     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4618:14)
+I/flutter (31419): #15     Element.updateChild (package:flutter/src/widgets/framework.dart:2682:15)
+I/flutter (31419): #16     _RenderDecorationElement._updateChild (package:flutter/src/material/input_decorator.dart:1111:30)
+I/flutter (31419): #17     _RenderDecorationElement.update (package:flutter/src/material/input_decorator.dart:1127:5)
+I/flutter (31419): #18     Element.updateChild (package:flutter/src/widgets/framework.dart:2682:15)
+I/flutter (31419): #19     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3636:16)
+I/flutter (31419): #20     Element.rebuild (package:flutter/src/widgets/framework.dart:3478:5)
+I/flutter (31419): #21     StatefulElement.update (package:flutter/src/widgets/framework.dart:3760:5)
+I/flutter (31419): #22     Element.updateChild (package:flutter/src/widgets/framework.dart:2682:15)
+I/flutter (31419): #23     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3636:16)
+I/flutter (31419): #24     Element.rebuild (package:flutter/src/widgets/framework.dart:3478:5)
+I/flutter (31419): #25     StatefulElement.update (package:flutter/src/widgets/framework.dart:3760:5)
+I/flutter (31419): #26     Element.updateChild (package:flutter/src/widgets/framework.dart:2682:15)
+I/flutter (31419): #27     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4618:14)
+I/flutter (31419): #28     Element.updateChild (package:flutter/src/widgets/framework.dart:2682:15)
+I/flutter (31419): #29     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3636:16)
+I/flutter (31419): #30     Element.rebuild (package:flutter/src/widgets/framework.dart:3478:5)
+I/flutter (31419): #31     StatefulElement.update (package:flutter/src/widgets/framework.dart:3760:5)
+I/flutter (31419): #32     Element.updateChild (package:flutter/src/widgets/framework.dart:2682:15)
+I/flutter (31419): #33     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3636:16)
+I/flutter (31419): #34     Element.rebuild (package:flutter/src/widgets/framework.dart:3478:5)
+I/flutter (31419): #35     StatelessElement.update (package:flutter/src/widgets/framework.dart:3685:5)
+I/flutter (31419): #36     Element.updateChild (package:flutter/src/widgets/framework.dart:2682:15)
+I/flutter (31419): #37     SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4618:14)
+I/flutter (31419): #38     Element.updateChild (package:flutter/src/widgets/framework.dart:2682:15)
+I/flutter (31419): #39     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3636:16)
+I/flutter (31419): #40     Element.rebuild (package:flutter/src/widgets/framework.dart:3478:5)
+I/flutter (31419): #41     StatefulElement.update (package:flutter/src/widgets/framework.dart:3760:5)
+I/flutter (31419): #42     Element.updateChild (package:flutter/src/widgets/framework.dart:2682:15)
+I/flutter (31419): #43     RenderObjectElement.updateChildren (package:flutter/src/widgets/framework.dart:4340:32)
+I/flutter (31419): #44     MultiChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:4726:17)
+I/flutter (31419): #45     Element.updateChild (package:flutter/src/widgets/framework.dart:2682:15)
+I/flutter (31419): #46     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:3636:16)
+I/flutter (31419): #47     Element.rebuild (package:flutter/src/widgets/framework.dart:3478:5)
+I/flutter (31419): #48     BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:2225:33)
+I/flutter (31419): #49     BindingBase&GestureBinding&ServicesBinding&SchedulerBinding&PaintingBinding&RendererBinding&WidgetsBinding.drawFrame (package:flutter/src/widgets/binding.dart:621:20)
+I/flutter (31419): #50     BindingBase&GestureBinding&ServicesBinding&SchedulerBinding&PaintingBinding&RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:208:5)
+I/flutter (31419): #51     BindingBase&GestureBinding&ServicesBinding&SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:990:15)
+I/flutter (31419): #52     BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:930:9)
+I/flutter (31419): #53     BindingBase&GestureBinding&ServicesBinding&SchedulerBinding.scheduleWarmUpFrame.<anonymous closure> (package:flutter/src/scheduler/binding.dart:751:7)
+I/flutter (31419): #55     _Timer._runTimers (dart:isolate-patch/dart:isolate/timer_impl.dart:382)
+I/flutter (31419): #56     _Timer._handleMessage (dart:isolate-patch/dart:isolate/timer_impl.dart:416)
+I/flutter (31419): #57     _RawReceivePortImpl._handleMessage (dart:isolate-patch/dart:isolate/isolate_patch.dart:165)
+I/flutter (31419): (elided 3 frames from class _AssertionError and package dart:async-patch)
+I/flutter (31419): ════════════════════════════════════════════════════════════════════════════════════════════════════
+I/flutter (31419): Another exception was thrown: No Directionality widget found.
+I/flutter (31419): Another exception was thrown: No Directionality widget found.
+I/flutter (31419): Another exception was thrown: A RenderFlex overflowed by 199432 pixels on the bottom.
+Reloaded 466 of 482 libraries in 3,278ms.
+Some program elements were changed during reload but did not run when the view was reassembled;
+you may need to restart the app for the changes to have an effect.
+• main (lib/main.dart:4)
+• _MyAppState (lib/main.dart:22)
+• MyApp (lib/main.dart:15)
+• TextData (lib/main.dart:8)
+Restarted app in 1,677ms.
