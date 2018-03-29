@@ -1,0 +1,112 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(new MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      title: 'Delayed Texter',
+      theme: new ThemeData(
+        primaryColor: Colors.blue,
+      ),
+      home: new Scaffold(
+        body: new DTextMessage(),
+      ),
+    );
+  }
+}
+
+class TextData {
+  String name = '';
+  String phoneNumber = '';
+  String timer = '';
+  String message = '';
+}
+
+class DTextMessage extends StatefulWidget {
+  DTextMessage({Key key}) : super(key: key);
+
+  @override
+  DTextMessageState createState() => new DTextMessageState();
+}
+
+class DTextMessageState extends State<DTextMessage> {
+  final GlobalKey<FormState> _formKey = new GlobalKey<FormState>();
+  final TextEditingController _controller = new TextEditingController();
+  TextData text = new TextData();
+
+  void showInSnackBar(String value) {
+    Scaffold.of(context).showSnackBar(
+          new SnackBar(content: new Text(value)),
+        );
+  }
+
+  void _handleSubmitted() {
+    final FormState form = _formKey.currentState;
+    form.save();
+    showInSnackBar('${text.phoneNumber}');
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text('Delayed Texts'),
+      ),
+      body: _buildForm(),
+    );
+  }
+
+  Widget _buildForm() {
+    return new SafeArea(
+      top: false,
+      bottom: false,
+      child: new Form(
+        key: _formKey,
+        child: new SingleChildScrollView(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: new Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              const SizedBox(height: 24.0),
+              new TextFormField(
+                  decoration: const InputDecoration(
+                    border: const UnderlineInputBorder(),
+                    filled: true,
+                    icon: const Icon(Icons.phone),
+                    hintText: 'Number to Call?',
+                    labelText: 'Phone Number',
+                  ),
+                  keyboardType: TextInputType.phone,
+                  onSaved: (String value) {
+                    text.phoneNumber = value;
+                  }),
+              // Text Message
+              const SizedBox(height: 24.0),
+              new TextFormField(
+                  decoration: const InputDecoration(
+                    border: const UnderlineInputBorder(),
+                    filled: true,
+                    icon: const Icon(Icons.message),
+                    hintText: 'What Would you like to send?',
+                    labelText: 'Text Message',
+                  ),
+                  onSaved: (String value) {
+                    text.message = value;
+                  }),
+
+              const SizedBox(height: 24.0),
+              new Center(
+                child: new RaisedButton(
+                  onPressed: _handleSubmitted,
+                  child: const Text('SEND'),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
