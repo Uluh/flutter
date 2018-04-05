@@ -1,112 +1,50 @@
-import 'package:flutter/material.dart';
-
-
-void main() {
-  runApp(new MyApp());
-}
-
-class TextData {
-  String name = '';
-  String phoneNumber = '';
-  String timer = '';
-  String message = '';
-}
-
-class MyApp extends StatefulWidget {
-  MyApp({Key key}) : super(key: key);
+class SavedMessage extends StatefulWidget {
+  SavedMessage({Key key}) : super(key: key);
 
   @override
-  _MyAppState createState() => new _MyAppState();
+  SavedMessageState createState() => new SavedMessageState();
 }
 
-class _MyAppState extends State<MyApp> {
-final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-final GlobalKey<FormState> _formKey = new GlobalKey<FormState>();
-
-  TextData text = new TextData();
-
- void showInSnackBar(String value) {
-    _scaffoldKey.currentState.showSnackBar(new SnackBar(
-      content: new Text(value)
-    ));
-  }
-
-  void _handleSubmitted() {
-    final FormState form = _formKey.currentState;
-    form.save();
-    showInSnackBar('Message received');
-  }
+class SavedMessageState extends State<SavedMessage> {
+  List<TextData> textList;
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: 'Delayed Texts',
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text('Delayed Texts'),
-        ),
-        body: new SafeArea(
-          top: false,
-          bottom: false,
-          child: new Form(
-            key: _formKey,
-            child: new SingleChildScrollView(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              child: new Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: <Widget>[
-                    /*
-                    // Name
-                    const SizedBox(height: 24.0),
-                    new TextFormField(
-                      decoration: const InputDecoration(
-                        border: const UnderlineInputBorder(),
-                        filled: true,
-                        icon: const Icon(Icons.person),
-                        hintText: 'Who to Call?',
-                        labelText: 'Name',
-                      ),
-                      onSaved: (String value) {text.name == value;}
-                    ),
-                    */
-                    // Phone Number
-                    const SizedBox(height: 24.0),
-                    new TextFormField(
-                      decoration: const InputDecoration(
-                        border: const UnderlineInputBorder(),
-                        filled: true,
-                        icon: const Icon(Icons.phone),
-                        hintText: 'Number to Call?',
-                        labelText: 'Phone Number',
-                      ),
-                      keyboardType: TextInputType.phone,
-                      onSaved: (String value) {text.phoneNumber == value;}
-                    ),
-                    // Text Message
-                    const SizedBox(height: 24.0),
-                    new TextFormField(
-                      decoration: const InputDecoration(
-                        border: const UnderlineInputBorder(),
-                        filled: true,
-                        icon: const Icon(Icons.message),
-                        hintText: 'What Would you like to send?',
-                        labelText: 'Text Message',
-                      ),
-                      onSaved: (String value) {text.message == value;}
-                    ),
-                 
-                    const SizedBox(height: 24.0),
-                    new Center(
-                      child: new RaisedButton(
-                        onPressed: _handleSubmitted,
-                        child: const Text('SEND'),     
-                      ),
-                    ),
-                  
-                  ]),
-            ),
-          ),
-        ),
+    return new ListView.builder(
+      itemCount: textList.length,
+      itemBuilder: (context, index) {
+        return new ListTile(
+          title: new Text('Message to $textList[index].name'),
+          onTap: () {
+            Navigator.push(
+              context,
+              new MaterialPageRoute(
+                builder: (context) =>
+                    new TextInfoScreen(textData: textList[index]),
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
+}
+
+class TextInfoScreen extends StatelessWidget {
+  final TextData textData;
+
+  TextInfoScreen({Key key, @required this.textData}) : super(key: key);
+//Annotation must be either a const variable reference or const constructor invocation.
+
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text("Message to ${textData.name}"),
+      ),
+      body: new Padding(
+        padding: new EdgeInsets.all(16.0),
+        child: new Text('Message: ${textData.message}'),
       ),
     );
   }
